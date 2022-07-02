@@ -2,7 +2,7 @@
   <!--所有东西放container里-->
   <el-container class="container">
     <!--aside 左侧导航栏-->
-    <el-aside width="200px" style="background-color:#626aef; border-radius: 12px;">
+    <el-aside width="200px" style="background-color:#4A2AC6; border-radius: 12px;">
       <!--侧边栏里的项目-->
       <el-scrollbar>
         <el-head class = "title" style="color:rgb(255, 254, 214);">
@@ -34,12 +34,25 @@
       </el-header>
       
       <!--主体部分，放置各种图块或表格；需要划分Layout-->
-      <div>
-      <h2>this is the main part!</h2>
-      <Echarts></Echarts>
-      </div>
+      <el-row class="row">
+        <el-col :span="24" class="col">
+          <div :style="{width:'100%', height: '300px'}"><BarChart></BarChart></div>
+        </el-col>
+      </el-row>
+      <el-row class="row">
+        <el-col :span="12" class="col" >
+          <div id="dom"><DoughnutChart></DoughnutChart></div>
+        </el-col>
+        <el-col :span="1" ></el-col>
+        <el-col :span="11" class="col" >
+        </el-col>
+      </el-row>
+      <el-row class="row">
+        <el-col :span="14" class="col" ></el-col>
+        <el-col :span="1" ></el-col>
+        <el-col :span="9" class="col" ></el-col>
+      </el-row>
     </el-container>
-    
   </el-container>
   
 </template>
@@ -50,9 +63,10 @@ import {
   DataLine,
   Document,
   Avatar,
- } from '@element-plus/icons-vue';
+ } from '@element-plus/icons-vue'
 
- import Echarts from '../components/ChartsTest.vue';
+ import BarChart from '../components/Charts/BarChart.vue';
+ import DoughnutChart from '../components/Charts/Doughnut.vue';
 
 export default {
   name: "DashBoard",
@@ -60,12 +74,13 @@ export default {
     DataLine,
     Document,
     Avatar,
-    Echarts,
+    BarChart,
+    DoughnutChart,
   },
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .container{
   height: 100%;
   width: 100%;
@@ -81,7 +96,7 @@ export default {
   height:120px;
 }
 .menu{
-  background-color: #626aef;
+  background-color: #4A2AC6;
   letter-spacing: 10px;
   text-align: left;
   font-size: large;
@@ -97,4 +112,19 @@ export default {
   margin-top: 5px;
   margin-right: 10px;
 }
+
+.row {
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  margin-right: 30px;
+}
+.col {
+  border-radius: 10px;
+  min-height: 200px;
+  background-color:rgba(255, 255, 255,0.3);
+  box-shadow: rgb(0 0 0 / 20%) 1px 2px 10px;
+}
+
 </style>

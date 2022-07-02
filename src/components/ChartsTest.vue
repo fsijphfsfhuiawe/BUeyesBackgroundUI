@@ -1,21 +1,15 @@
 <template>
-    <div id="myChart" ref="myRef" :style="{width: '300px', height: '300px'}"></div>
+<div id="myChart" ref="myRef" :style="{width: '100%', height: '100%'}"></div>
 </template>
 
-
-
 <script>
-  import { getCurrentInstance, onMounted } from 'vue';
+  import { onMounted, } from 'vue';
   import * as echarts from 'echarts';
-// import func from 'vue-editor-bridge';
-
 
 export default {
   name: 'Echarts',
   setup(){
-    console.log("iiiiiiii");
     onMounted(()=>{
-        console.log("iii");
         let myChart = echarts.init(document.getElementById('myChart'));
         myChart.setOption({
             title: { text: '太阳系八大行星的卫星数量' },
@@ -30,9 +24,14 @@ export default {
                 data: [0, 0, 1, 2, 79, 82, 27, 14]
             }]
         });
-        window.onresize = function(){
-            myChart.resize();
-        };
+        // window.onresize = function(){
+        //     myChart.resize();
+        // };
+
+        // 监听window窗口变化
+        window.addEventListener('resize', () => {
+          myChart.resize()
+        })
     })
   },
 
