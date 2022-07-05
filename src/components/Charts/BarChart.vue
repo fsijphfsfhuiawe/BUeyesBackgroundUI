@@ -12,6 +12,10 @@
       onMounted(()=>{
         let BarChart = echarts.init(document.getElementById('BarChart'));
         BarChart.setOption({
+          title: {
+                text: '当日各类新闻新增数',
+                subtext: 'Fake Data'
+          },
           tooltip: {
           trigger: 'axis',
           axisPointer: {

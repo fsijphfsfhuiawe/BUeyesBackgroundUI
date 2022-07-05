@@ -12,7 +12,7 @@ export default ({
         onMounted(()=>{
         let DoughnutChart = echarts.init(document.getElementById('DoughnutChart'));
         DoughnutChart.setOption({
-            // title: { text: 'this is the title' },
+            title: { text: '当前新闻类别分布百分比' },
             tooltip: {
                 trigger: 'item'
             },

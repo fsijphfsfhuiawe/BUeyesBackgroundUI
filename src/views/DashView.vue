@@ -1,8 +1,9 @@
 <template>
   <!--所有东西放container里-->
-  <el-container class="container">
+  <el-container class="container" style="width:100%">
     <!--aside 左侧导航栏-->
-    <el-aside width="200px" style="background-color:#4A2AC6; border-radius: 12px;">
+    <el-affix :offset="0">
+    <el-aside width="200px" style="background-color:#4A2AC6; border-radius: 12px; height: 100%; min-height: 900px;">
       <!--侧边栏里的项目-->
       <el-scrollbar>
         <el-head class = "title" style="color:rgb(255, 254, 214);">
@@ -25,6 +26,7 @@
         </el-footer>
       </el-scrollbar>
     </el-aside>
+    </el-affix>
 
     <!--右部界面-->
     <el-container>
@@ -40,11 +42,12 @@
         </el-col>
       </el-row>
       <el-row class="row">
-        <el-col :span="12" class="col" >
+        <el-col :span="10" class="col" >
           <div id="dom"><DoughnutChart></DoughnutChart></div>
         </el-col>
         <el-col :span="1" ></el-col>
-        <el-col :span="11" class="col" >
+        <el-col :span="13" class="col" >
+          <div><LineDistributionChart></LineDistributionChart></div>
         </el-col>
       </el-row>
       <el-row class="row">
@@ -67,6 +70,8 @@ import {
 
  import BarChart from '../components/Charts/BarChart.vue';
  import DoughnutChart from '../components/Charts/Doughnut.vue';
+ import LineDistributionChart from '../components/Charts/LineDistributionChart.vue';
+
 
 export default {
   name: "DashBoard",
@@ -76,14 +81,15 @@ export default {
     Avatar,
     BarChart,
     DoughnutChart,
+    LineDistributionChart
   },
 };
 </script>
 
 <style lang="scss" scoped>
 .container{
-  height: 100%;
   width: 100%;
+  min-height:900px;
   background-size: 100% 100%;
   background-color:rgb(255, 254, 214);
   margin:0;
