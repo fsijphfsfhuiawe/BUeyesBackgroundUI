@@ -152,7 +152,7 @@ export default ({
       type: 'scatter',
       coordinateSystem: 'bmap',
       data: convertData(
-        [
+        [//导入值
         { name: '海门', value: 9 },
         { name: '鄂尔多斯', value: 12 },
         { name: '招远', value: 12 },
@@ -610,7 +610,7 @@ export default ({
       res.push({
         name: data[i].name,
         value: geoCoord.concat(data[i].value)
-      });s
+      });
     }
   }
   return res;

@@ -1,9 +1,34 @@
 <template>
+<div class="news">
   <!--所有东西放container里-->
   <el-container class="container" style="width:100%">
     <!--aside 左侧导航栏-->
-    <Menu></Menu>
-    
+    <el-affix :offset="0">
+    <el-aside width="200px" style="background-color:#4A2AC6; border-radius: 12px; height: 100%; min-height: 900px;">
+      <!--侧边栏里的项目-->
+      <el-scrollbar>
+        <el-head class = "title" style="color:rgb(255, 254, 214);">
+          <h2 style="margin-top:50px; margin-right:100px;margin-bottom: 50px; margin-left: 30px;">BUeyes</h2>
+        </el-head>
+        <el-menu class = "menu" @click="ShowDashboard">
+          <el-icon class="icon"><DataLine /></el-icon>
+          <span class = "menutext"> 概览</span>
+        </el-menu>
+        <el-menu class = "menu" @click="ShowDashboard">
+          <el-icon class="icon"><Document /></el-icon>
+          <span class = "menutext"> 新闻</span>
+        </el-menu>
+        <el-menu class = "menu" @click="ShowDashboard">
+          <el-icon class="icon"><Avatar /></el-icon>
+          <span class = "menutext"> 用户</span>
+        </el-menu>
+        <el-footer>
+          <!-- 夜间模式（待开发） -->
+        </el-footer>
+      </el-scrollbar>
+    </el-aside>
+    </el-affix>
+
     <!--右部界面-->
     <el-container>
       <!--头部，里面有管理员头像和一个拓展图标-->
@@ -33,7 +58,7 @@
       </el-row>
     </el-container>
   </el-container>
-  
+</div>
 </template>
 
 <script>
@@ -44,17 +69,14 @@ import {
   Avatar,
  } from '@element-plus/icons-vue'
 
- import Menu from '../components/Menu.vue';
  import BarChart from '../components/Charts/BarChart.vue';
  import DoughnutChart from '../components/Charts/Doughnut.vue';
  import LineDistributionChart from '../components/Charts/LineDistributionChart.vue';
-//  import '@/util/animate.min.css';
 
 
 export default {
   name: "DashBoard",
   components:{
-    Menu,
     DataLine,
     Document,
     Avatar,
@@ -66,25 +88,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// .asideShadow{
-//   overflow: hidden;
-//   box-shadow:2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
-//   6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
-//   12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
-//   22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
-//   41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
-//   100px 100px 80px rgba(0, 0, 0, 0.07);
-
-// }
-
-// .nav .a{
-//   text-decoration: none;
-// }
-// .nav{
-//   // padding: 50px;
-//   background-color: #B5A2FF;
-// 	color: #fff;
-// }
 .container{
   width: 100%;
   min-height:900px;
