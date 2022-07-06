@@ -1,18 +1,6 @@
 <template>
-  <!--所有东西放container里-->
-  <el-container class="container" style="width:100%">
-    <!--aside 左侧导航栏-->
-    <Menu></Menu>
-    
-    <!--右部界面-->
-    <el-container>
-      <!--头部，里面有管理员头像和一个拓展图标-->
-      <el-header style="text-align:right; font-size: 15px">
-      <p>this is the head.</p>
-      </el-header>
-      
-      <!--主体部分，放置各种图块或表格；需要划分Layout-->
-        <!-- <el-row class="row">
+  <div>
+        <el-row class="row">
           <el-col :span="24" class="col">
             <div :style="{width:'100%', height: '300px'}"><BarChart></BarChart></div>
           </el-col>
@@ -31,36 +19,45 @@
           <el-col :span="1" ></el-col>
           <el-col :span="9" class="col" ></el-col>
         </el-row>
-     -->
-      <Dash></Dash>
-    </el-container>
-  </el-container>
-  
+      </div>
 </template>
 
 <script>
 //引入
- import Menu from '../components/Menu.vue';
- import Dash from '../components/Dash.vue';
+ import BarChart from '../components/Charts/BarChart.vue';
+ import DoughnutChart from '../components/Charts/Doughnut.vue';
+ import LineDistributionChart from '../components/Charts/LineDistributionChart.vue';
 
 export default {
-  name: "DashBoard",
+  name: "Dash",
   components:{
-    Menu,
-    Dash,
+    BarChart,
+    DoughnutChart,
+    LineDistributionChart
   },
 };
 </script>
 
 <style lang="scss" scoped>
-
-.container{
-  width: 100%;
-  min-height:900px;
-  background-size: 100% 100%;
-  background-color:rgb(255, 254, 214);
-  margin:0;
-  position:absolute;
+.row {
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  margin-right: 30px;
 }
+.col {
+  border-radius: 10px;
+  min-height: 200px;
+  background-color:rgba(255, 255, 255,0.3);
+  box-shadow: rgb(0 0 0 / 20%) 1px 2px 10px;
+}
+
 </style>
+
+
+
+
+
+
 
