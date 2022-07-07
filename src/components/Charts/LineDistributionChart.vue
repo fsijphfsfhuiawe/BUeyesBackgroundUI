@@ -14,7 +14,6 @@
     LineDistributionChart.setOption({
             title: {
                 text: '每日访问量',
-                subtext: 'Fake Data'
             },
         tooltip: {
             trigger: 'axis',

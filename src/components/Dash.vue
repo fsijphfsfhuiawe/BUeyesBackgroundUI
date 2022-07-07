@@ -1,10 +1,13 @@
 <template>
   <div>
+        <!-- 条形图，当日各类新闻新增数 -->
         <el-row class="row">
           <el-col :span="24" class="col">
             <div :style="{width:'100%', height: '300px'}"><BarChart></BarChart></div>
           </el-col>
         </el-row>
+        <!-- 环形图，表示各类新闻占总数的比重 -->
+        <!-- 折线条形分配图，表示一周内访问次数的统计图像，可以看到哪一天人比较多 -->
         <el-row class="row">
           <el-col :span="10" class="col" >
             <div id="dom"><DoughnutChart></DoughnutChart></div>
@@ -13,6 +16,7 @@
           <el-col :span="13" class="col" >
             <div><LineDistributionChart></LineDistributionChart></div>
           </el-col>
+        <!-- 信箱板块 -->
         </el-row>
         <el-row class="row">
           <el-col :span="14" class="col" ></el-col>

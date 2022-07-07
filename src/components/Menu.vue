@@ -2,7 +2,7 @@
 <div>
     <!--aside 左侧导航栏-->
     <el-affix :offset="0">
-    <el-aside width="200px" style="background-color:#4A2AC6; border-radius: 12px; height: 100%; min-height: 1200px;">
+    <el-aside width="200px" style="background-color:#4A2AC6; border-radius: 12px; height: 100%; min-height: 900px;">
       <!--侧边栏里的项目-->
       <el-scrollbar>
         <el-head class = "title" style="color:rgb(255, 254, 214);">

@@ -8,7 +8,7 @@
     <el-container>
       <!--头部，里面有管理员头像和一个拓展图标-->
       <el-header style="text-align:right; font-size: 15px">
-      <p>this is the head.</p>
+      <!-- <p>this is the head.</p> -->
       </el-header>
       
       <!--主体部分，放置各种图块或表格；需要划分Layout-->

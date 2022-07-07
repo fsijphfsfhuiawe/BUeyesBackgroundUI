@@ -14,7 +14,6 @@
         LineChart.setOption({
           title: {
                 text: '用户一周访问量',
-                subtext: 'Fake Data'
           },
           xAxis: {
             type: 'category',

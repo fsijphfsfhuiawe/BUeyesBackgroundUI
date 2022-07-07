@@ -2,6 +2,7 @@
     <div id="BarChart" ref="BarChart" :style="{width: '100%', height: '100%'}"></div>
 </template>
 
+<!-- 新闻 -->
 <script>
   import { onMounted, } from 'vue';
   import * as echarts from 'echarts';
@@ -14,7 +15,6 @@
         BarChart.setOption({
           title: {
                 text: '当日各类新闻新增数',
-                subtext: 'Fake Data'
           },
           tooltip: {
           trigger: 'axis',
@@ -38,7 +38,7 @@
         },
         series: [
           {
-            name: 'Direct',
+            name: '推荐',
             type: 'bar',
             stack: 'total',
             label: {
@@ -47,10 +47,10 @@
             emphasis: {
               focus: 'series'
             },
-            data: [320, 302, 301, 334, 390, 330, 320]
+            data: [150, 200, 201, 100, 190, 120, 110]
           },
           {
-            name: 'Mail Ad',
+            name: '热门',
             type: 'bar',
             stack: 'total',
             label: {
@@ -62,7 +62,7 @@
             data: [120, 132, 101, 134, 90, 230, 210]
           },
           {
-            name: 'Affiliate Ad',
+            name: '国内',
             type: 'bar',
             stack: 'total',
             label: {
@@ -71,10 +71,10 @@
             emphasis: {
               focus: 'series'
             },
-            data: [220, 182, 191, 234, 290, 330, 310]
+            data: [120, 182, 91, 134, 90, 130, 110]
           },
           {
-            name: 'Video Ad',
+            name: '国际',
             type: 'bar',
             stack: 'total',
             label: {
@@ -83,10 +83,10 @@
             emphasis: {
               focus: 'series'
             },
-            data: [150, 212, 201, 154, 190, 330, 410]
+            data: [150, 212, 201, 154, 190, 130, 110]
           },
           {
-            name: 'Search Engine',
+            name: '社会',
             type: 'bar',
             stack: 'total',
             label: {
@@ -95,15 +95,70 @@
             emphasis: {
               focus: 'series'
             },
-            data: [820, 832, 901, 934, 1290, 1330, 1320]
+            data: [150, 132, 101, 100, 190, 230, 210]
+          },
+          {
+            name: '文娱',
+            type: 'bar',
+            stack: 'total',
+            label: {
+              show: true
+            },
+            emphasis: {
+              focus: 'series'
+            },
+            data: [150, 230, 210, 100, 132, 101, 110]
+          },
+          {
+            name: '教育',
+            type: 'bar',
+            stack: 'total',
+            label: {
+              show: true
+            },
+            emphasis: {
+              focus: 'series'
+            },
+            data: [150, 200, 201, 100, 190, 120, 110]
+          },
+          {
+            name: '生活',
+            type: 'bar',
+            stack: 'total',
+            label: {
+              show: true
+            },
+            emphasis: {
+              focus: 'series'
+            },
+            data: [150, 200, 132, 101, 190, 120, 110]
+          },
+          {
+            name: '科技',
+            type: 'bar',
+            stack: 'total',
+            label: {
+              show: true
+            },
+            emphasis: {
+              focus: 'series'
+            },
+            data: [110, 200, 81, 60, 100, 90, 110]
+          },
+          {
+            name: '法治',
+            type: 'bar',
+            stack: 'total',
+            label: {
+              show: true
+            },
+            emphasis: {
+              focus: 'series'
+            },
+            data: [50, 100, 101, 70, 90, 40, 70]
           }
         ]
         });
-        // window.onresize = function(){
-        //     if(BarChart) BarChart.resize();
-        // };
-
-        // 监听window窗口变化
         window.addEventListener('resize', () => {
           BarChart.resize()
         })
