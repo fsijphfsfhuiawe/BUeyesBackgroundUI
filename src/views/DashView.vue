@@ -40,16 +40,16 @@
 
 <script>
 //引入
- import Menu from '../components/Menu.vue';
- import Dash from '../components/Dash.vue';
-
-export default {
-  name: "DashBoard",
-  components:{
-    Menu,
-    Dash,
-  },
-};
+  import Menu from '../components/Menu.vue';
+  import Dash from '../components/Dash.vue';
+ 
+  export default {
+    name: "DashBoard",
+    components:{
+      Menu,
+      Dash,
+    },
+  };
 </script>
 
 <style lang="scss" scoped>

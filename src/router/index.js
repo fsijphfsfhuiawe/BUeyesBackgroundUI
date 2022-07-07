@@ -1,20 +1,33 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
-// import NewsView from "../views/NewsView.vue";
-// import UserView from "../views/UserView.vue";
+import NewsView from "../views/NewsView.vue";
+import DashView from "../views/DashView.vue";
+import UserView from "../views/UserView.vue";
 
 const routes = [
+  // {
+  //   path: "/",
+  //   name: "homeview",
+  //   component: HomeView,
+  // },
   {
     path: "/",
-    name: "homeview",
-    component: HomeView,
+    name: "DashView",
+    component: DashView,
   },
   {
-    path:"/",
+    path:"/NewsView",
     name:'NewsView',
+    // component: NewsView,
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/NewsView.vue"),
+      import(/* webpackChunkName: "NewsView" */ "../views/NewsView.vue"),
   },
+  {
+    path: "/UserView",
+    name: "UserView",
+    component: UserView,
+  },
+  
   // {
   //   path:"/",
   //   name:'user',

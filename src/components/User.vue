@@ -22,6 +22,7 @@
             <div :style="{width:'100%', height: '300px'}"><BarChart></BarChart></div>
           </el-col>
         </el-row> -->
+        <!-- 用户信箱管理 -->
       </div>
 </template>
 

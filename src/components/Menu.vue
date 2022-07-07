@@ -10,15 +10,15 @@
         </el-head>
         <el-menu class = "menu" @click="ShowDashboard">
           <el-icon class="icon"><DataLine /></el-icon>
-          <span class = "menutext"><router-link to="../views/DashView.vue"> 概览 </router-link></span>
+          <span class = "menutext"><router-link to="/"> 概览 </router-link></span>
         </el-menu>
         <el-menu class = "menu" @click="ShowDashboard">
           <el-icon class="icon"><Document /></el-icon>
-          <span active-class = "menutext"><router-link to="/src/views/NewsView.vue"> 新闻 </router-link></span>
+          <span active-class = "menutext"><router-link to="/NewsView"> 新闻 </router-link></span>
         </el-menu>
         <el-menu class = "menu" @click="ShowDashboard">
           <el-icon class="icon"><Avatar /></el-icon>
-          <span active-class = "menutext"><router-link to="../views/UserView.vue"> 用户 </router-link></span>
+          <span active-class = "menutext"><router-link to="/UserView"> 用户 </router-link></span>
         </el-menu>
       </el-scrollbar>
     </el-aside>
