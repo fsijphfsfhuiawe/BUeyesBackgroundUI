@@ -19,18 +19,18 @@ export default {
 <!-- 测试用 -->
 <!-- <template>
   <div class="home">
-    <Dash></Dash>
+    <UserView></UserView>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Dash from "../components/Dash.vue";
+import UserView from "./UserView.vue";
 
 export default {
   name: "HomeView",
   components: {
-    Dash
+    UserView
 },
 };
 </script> -->

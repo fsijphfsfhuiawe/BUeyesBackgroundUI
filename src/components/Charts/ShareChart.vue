@@ -78,10 +78,6 @@
           ]
         });
         
-        
-
-
-
         // 监听window窗口变化
         window.addEventListener('resize', () => {
           ShareChart.resize()

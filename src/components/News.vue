@@ -33,12 +33,9 @@
 
 
 export default {
-  name: "DashBoard",
+  name: "News",
   components:{
     Menu,
-    DataLine,
-    Document,
-    Avatar,
     ShareChart,
     DoughnutChart,
     LineDistributionChart

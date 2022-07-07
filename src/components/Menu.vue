@@ -2,7 +2,7 @@
 <div>
     <!--aside 左侧导航栏-->
     <el-affix :offset="0">
-    <el-aside width="200px" style="background-color:#4A2AC6; border-radius: 12px; height: 100%; min-height: 900px;">
+    <el-aside width="200px" style="background-color:#4A2AC6; border-radius: 12px; height: 100%; min-height: 1200px;">
       <!--侧边栏里的项目-->
       <el-scrollbar>
         <el-head class = "title" style="color:rgb(255, 254, 214);">
@@ -14,11 +14,11 @@
         </el-menu>
         <el-menu class = "menu" @click="ShowDashboard">
           <el-icon class="icon"><Document /></el-icon>
-          <span active-class = "menutext"><router-link to="../views/NewsView.vue"> 新闻 </router-link></span>
+          <span active-class = "menutext"><router-link to="/src/views/NewsView.vue"> 新闻 </router-link></span>
         </el-menu>
         <el-menu class = "menu" @click="ShowDashboard">
           <el-icon class="icon"><Avatar /></el-icon>
-          <span active-class = "menutext"><router-link to="../views/UsersView.vue"> 用户 </router-link></span>
+          <span active-class = "menutext"><router-link to="../views/UserView.vue"> 用户 </router-link></span>
         </el-menu>
       </el-scrollbar>
     </el-aside>
