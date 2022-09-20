@@ -45,6 +45,7 @@ export default ({
                 labelLine: {
                     show: false
                 },
+                //data.foreach(item=>{})
                 data: [
                     { value: 1048, name: 'Search Engine' },
                     { value: 735, name: 'Direct' },
